@@ -4,5 +4,3 @@
 
   John Tarkpor
   Junior Front-end Developer*/
-
-  alert("hello");
