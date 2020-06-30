@@ -22,10 +22,10 @@
   let loadPerson = (personNumber) => {
     let person = people[personNumber];
 
-    $(".quote").text(person.quote);
-    $(".name").text(person.name);
-    $(".profession").text(person.profession);
-    $(".portrait").attr("src", person.photo);
+    document.querySelector(".quote").textContent = person.quote;
+    document.querySelector(".name").textContent = person.name;
+    document.querySelector(".profession").textContent = person.profession;
+    document.querySelector(".portrait").setAttribute("src", person.photo);
   }
 
   loadPerson(0);
