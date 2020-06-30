@@ -66,6 +66,13 @@ button.next {
   margin-left: -1px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+button:focus {
+  outline: 0;
+}
+
 .box.second {
   background: no-repeat center top/17% url("images/pattern-quotes.svg"), no-repeat bottom left/75% url("images/pattern-curve.svg");
   text-align: center;
@@ -88,6 +95,15 @@ button.next {
   margin: 0px 0px 65px 0px;
   font-size: 15px;
   color: hsl(240, 18%, 77%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 @media (min-width: 376px) {
