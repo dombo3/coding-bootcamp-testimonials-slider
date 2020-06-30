@@ -30,6 +30,31 @@
 
   loadPerson(0);
 
+  const nextButton = document.querySelector("button.next");
+  const previousButton = document.querySelector("button.prev")
+  
+  nextButton.onclick = function(e) {
+    nextPerson();
+    loadPerson(personNumber);
+  }
+
+  previousButton.onclick = function(e) {
+    previousPerson();
+    loadPerson(personNumber);
+  }
+
+  document.onkeydown = function(e) {
+    var code = e.keyCode;
+    if (code === 39) {
+      nextPerson();
+    } else if (code === 37) {
+      previousPerson();
+    }
+    loadPerson(personNumber);
+  }
+
+
+/*---------------------- with JQuery----------------------------
   $('button.next').on('click', function() {
     nextPerson();
     loadPerson(personNumber);
@@ -48,7 +73,8 @@
       previousPerson();
     }
     loadPerson(personNumber);
-  })
+  }
+  -----------------------------------------------------------------*/
 
   let nextPerson = function() {
     if (personNumber < people.length - 1) {
